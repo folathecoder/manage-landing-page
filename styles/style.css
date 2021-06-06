@@ -1,1 +1,230 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+li {
+  list-style: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background-color: #f2f2f2;
+  color: #242d52;
+  max-width: 100%;
+  min-height: 100vh;
+  position: relative;
+  font-family: "Be Vietnam", sans-serif;
+  font-size: 1rem;
+  line-height: 1.75rem;
+  font-weight: 400;
+  text-rendering: optimizeSpeed;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 3.125rem;
+  font-weight: 700;
+}
+
+.hidden {
+  display: none;
+}
+
+.btn {
+  padding: 0.75rem 2rem 1rem 2rem;
+  border-radius: 3.125rem;
+  background-color: #f25f3a;
+  color: #fbf4f3;
+  font-size: 0.8125rem;
+  line-height: 0.8125rem;
+  font-weight: 700;
+  -webkit-box-shadow: 0rem 0.25rem 0rem 0rem rgba(0, 0, 0, 0.178);
+          box-shadow: 0rem 0.25rem 0rem 0rem rgba(0, 0, 0, 0.178);
+}
+
+.btn:hover {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  background-color: #f99076;
+}
+
+.intro__container {
+  max-width: 100%;
+  min-height: 0rem;
+  padding: 0rem 1.5rem;
+  padding-top: 2.8125rem;
+  background-image: url(../images/bg-tablet-pattern.svg);
+  background-repeat: no-repeat;
+  background-size: 25rem auto;
+  background-position: 3.125rem -3.125rem;
+}
+
+.header {
+  max-width: 100%;
+  min-height: 0rem;
+}
+
+.header__inner {
+  max-width: 69.375rem;
+  margin: 0px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__inner > * {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.header__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.header__button {
+  display: none;
+}
+
+.menu {
+  display: none;
+}
+
+.hero {
+  max-width: 100%;
+  min-height: 0rem;
+}
+
+.hero__inner {
+  max-width: 69.375rem;
+  margin: 0px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.hero__image {
+  min-height: 19.6875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero__content {
+  min-height: 25.5625rem;
+  text-align: center;
+}
+
+.hero__content p {
+  padding: 0.625rem 0rem 1.8125rem 0rem;
+}
+
+.explainer {
+  max-width: 100%;
+  min-height: 6.25rem;
+}
+
+.explainer__inner {
+  max-width: 69.375rem;
+  min-height: 0rem;
+  margin: 0rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.explainer__area1 {
+  text-align: center;
+  padding: 0rem 1.5rem;
+}
+
+.explainer__area1 h2 {
+  margin: 1.25rem 1.875rem;
+}
+
+.explainer__area2-service {
+  margin: 2.5rem 0rem;
+}
+
+.explainer__area2-service h3 {
+  display: block;
+  margin-bottom: 0.625rem;
+  background-color: red;
+  margin-left: 1.25rem;
+  border-radius: 1.25rem 0rem 0rem 1.25rem;
+}
+
+.explainer__area2-service p {
+  padding: 0rem 1.25rem;
+}
+
+.custom__number {
+  background-color: red;
+  color: black;
+  padding: 0.3125rem 1.25rem 0.375rem 1.25rem;
+  margin-right: 0.625rem;
+  border-radius: 1.25rem;
+  font-size: 1rem;
+  line-height: normal;
+}
+/*# sourceMappingURL=style.css.map */

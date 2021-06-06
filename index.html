@@ -1,23 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
+  <!-- Search Engine Optimization-->
   <title>Frontend Mentor | Manage landing page</title>
+  <meta name="description"
+    content="Manage is a tech startup that aims to bring everyone together to build better and scalable products.">
+  <meta name="keyword" content="tech statup, manage landing page, digital agency">
+  <meta name="author" content="Folarin Akinloye">
+
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Folarin Akinloye: Frontend Developer Portfolio" />
+  <meta property="og:description"
+    content="Folarin is a frontend developer and web accessibility advocate based in Nigeria. He builds accessible and responsive web interfaces that scales." />
+  <meta property="og:url" content="https://folathecoder.github.io/portfolio-V1/" />
+  <meta property="og:image" content="https://folathecoder.github.io/portfolio-V1/images/featured-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <script defer src="JavaScript/main.js"></script>
   <link rel="stylesheet" href="styles/style.css">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+  <!-- Google Font CDN -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@400;500;700&display=swap" rel="stylesheet">
 
-  Pricing
+</head>
+
+<body>
+  <section class="intro__container">
+
+    <header class="header">
+      <div class="header__inner">
+        <div class="header__logo">
+          <img src="./images/logo.svg" alt="manage agency logo">
+        </div>
+        <nav class="header__menu">
+          <button class="hambuger--open">
+            <img src="./images/icon-hamburger.svg" alt="">
+          </button>
+          <button class="hamburger--close hidden">
+            <img src="./images/icon-close.svg" alt="">
+          </button>
+          <ul class="menu">
+            <li class="menu__item"><a href="">Pricing</a></li>
+            <li class="menu__item"><a href="">Product</a></li>
+            <li class="menu__item"><a href="">About Us</a></li>
+            <li class="menu__item"><a href="">Careers</a></li>
+            <li class="menu__item"><a href="">Community</a></li>
+          </ul>
+        </nav>
+        <div class="header__button">
+          <a href="" class="btn">Get Started</a>
+        </div>
+      </div>
+    </header>
+    
+    <section class="hero">
+      <div class="hero__inner">
+        <div class="hero__image">
+          <div>
+            <img src="./images/illustration-intro.svg" alt="">
+          </div>
+        </div>
+        <div class="hero__content">
+          <h1>Bring everyone together to build better products.</h1>
+          <p>Manage makes it simple for software teams to plan day-to-day 
+            tasks while keeping the larger team goals in view.</p>
+          <a href="" class="btn">Get Started</a>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <section class="explainer">
+    <div class="explainer__inner">
+      <div class="explainer__area1">
+        <h2>What’s different about Manage?</h2>
+        <p>Manage provides all the functionality your team needs, without 
+          the complexity. Our software is tailor-made for modern digital 
+          product teams.</p>
+      </div>
+      <div class="explainer__area2">
+        <div class="explainer__area2-service">
+          <h3><span class="custom__number">01</span>Track company-wide progress</h3>
+          <p>Track company-wide progress
+            See how your day-to-day tasks fit into the wider vision. Go from 
+            tracking progress at the milestone level all the way done to the 
+            smallest of details. Never lose sight of the bigger picture again.</p>
+        </div>
+        <div class="explainer__area2-service">
+          <h3><span class="custom__number">02</span>Advanced built-in reports</h3>
+          <p>Set internal delivery estimates and track progress toward company 
+            goals. Our customisable dashboard helps you build out the reports 
+            you need to keep key stakeholders informed.</p>
+        </div>
+        <div class="explainer__area2-service">
+          <h3><span class="custom__number">03</span>Everything you need in one place</h3>
+          <p>Stop jumping from one service to another to communicate, store files, 
+            track tasks and share documents. Manage offers an all-in-one team 
+            productivity solution.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing
   Product
   About Us
   Careers
@@ -91,12 +185,8 @@
   Updates in your inbox…
   Go
 
-  Copyright 2020. All Rights Reserved
+  Copyright 2020. All Rights Reserved -->
 
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
 </body>
+
 </html>

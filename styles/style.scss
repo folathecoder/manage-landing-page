@@ -1,0 +1,294 @@
+// ===== converts pixels to rem
+@function rem($size) {
+    $remSize: $size / 16;
+    @return #{$remSize}rem;
+  }
+  
+// ===== media-queries
+@mixin media-query ($size) {
+@if $size == desktop {
+    @media screen and (min-width: 1200px) {
+        @content;
+    }
+}
+@else if $size == tablet {
+    @media screen and (min-width: 992px) {
+        @content;
+    }
+} 
+@else if $size == tablet-mini {
+    @media screen and (min-width: 786px) {
+        @content;
+    }
+} 
+@else if $size == large-mobile {
+    @media screen and (min-width: 602px) {
+        @content;
+    }
+} 
+@else if $size == mobile {
+    @media screen and (min-width: 300px) {
+        @content;
+    }
+} 
+@else if $size == mobile-mini {
+    @media screen and (min-width: 300px) {
+        @content;
+    }
+} 
+}
+  
+// ===== font family  
+$font-primary: 'Be Vietnam', sans-serif;
+
+// ==== font weights 
+$weight-bold: 700;
+$weight-regular: 500;
+$weight-light: 400;
+
+// ==== colors 
+$color-accent: hsl(12, 88%, 59%);
+$color-font: hsl(228, 39%, 23%); 
+$color-footer-bg: hsl(233, 12%, 13%);
+$color-bg: hsl(0, 0%, 95%);
+$color-neutral: hsl(9, 54%, 97%);
+$color-accent-active: hsl(12, 92%, 72%);
+
+    
+// // === border         
+// $border-primary: 1px solid hsla(0, 0%, 77%, 0.1);
+
+// ==== max-width
+$width-max: rem(1110);
+
+// ==== center section
+$center-section: 0px auto;
+
+// === section padding
+$section-padding: rem(0) rem(24);
+  
+  
+  // ========== CSS RESET FEATURES
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+li {
+    list-style: none;
+}
+
+
+// ====== Remove all animations and transitions for people that prefer not to see them 
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+// ======= BASE STYLES
+body {
+    background-color: $color-bg;
+    color: $color-font;
+    max-width: 100%;
+    min-height: 100vh;
+    position: relative;
+    font-family: $font-primary;
+    font-size: rem(16);
+    line-height: rem(28);
+    font-weight: $weight-light;
+    text-rendering: optimizeSpeed;
+}
+
+// section {
+//     padding: $section-padding;
+// }
+
+a {
+    text-decoration: none;
+}
+
+// ======= Typography
+ h1 {
+     font-size: rem(40);
+     line-height: rem(50);
+     font-weight: $weight-bold;
+ }
+
+.hidden {
+    display: none;
+}
+
+// ======= Button 
+
+.btn {
+    // max-width: rem(137);
+    // height: rem(44);
+    padding: rem(12) rem(32) rem(16) rem(32);
+    border-radius: rem(50);
+    background-color: $color-accent;
+    color: $color-neutral;
+    font-size: rem(13);
+    line-height: rem(13);
+    font-weight: $weight-bold;
+    box-shadow: rem(0) rem(4) rem(0) rem(0) rgba(0, 0, 0, 0.178);
+    &:hover {
+        transition: all 0.5s ease-in-out;
+        background-color: $color-accent-active;
+    }
+}
+
+.intro__container {
+    max-width: 100%;
+    min-height: rem(0);
+    // background-color: red;
+    padding: $section-padding;
+    padding-top: rem(45);
+    background-image: url(../images/bg-tablet-pattern.svg);
+    background-repeat: no-repeat;
+    background-size: rem(400) auto;
+    background-position: rem(50) rem(-50);
+}
+
+.header {
+    max-width: 100%;
+    min-height: rem(0);
+    // background-color:  yellow;
+
+    &__inner {
+        max-width: $width-max;
+        margin: $center-section;
+        // background-color: black;
+        display: flex;
+        align-items: center;
+
+        & > * {
+            flex: 1;
+        }
+    }
+
+    &__menu {
+        // background-color: #fff;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__button {
+        display: none;
+    }
+}
+
+.menu {
+    display: none;
+}
+
+
+// ========== Hero
+
+.hero {
+    // background-color: blue;
+    max-width: 100%;
+    min-height: rem(0);
+
+    &__inner {
+        max-width: $width-max;
+        margin: $center-section;
+        // background-color: rgb(30, 187, 16);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    &__image{
+        // background-color: pink;
+        min-height: rem(315);
+        display: flex;
+        align-items: center;
+    }
+
+    &__content {
+        min-height: rem(409);
+        // background-color: orange;
+        text-align: center;
+
+        p {
+            padding: rem(10) rem(0) rem(29) rem(0);
+        }
+    }
+}
+
+
+
+// ========== Section: What’s different about Manage?
+
+.explainer {
+    max-width: 100%;
+    min-height: rem(100);
+    // padding: $padding-container;
+  
+    &__inner {
+        max-width: $width-max;
+        min-height: rem(0);
+        margin: rem(0) auto;
+        display: flex;
+        flex-direction: column;
+    }
+    &__area1 {
+        text-align: center;
+        padding: $section-padding;
+  
+        h2 {
+            margin: rem(20) rem(30);
+        }
+    }
+  
+    &__area2 {
+  
+        &-service {
+            margin: rem(40) rem(0);
+  
+            h3 {
+                display: block;
+                margin-bottom: rem(10);
+                background-color: red;
+                margin-left: rem(20);
+                border-radius: rem(20) rem(0) rem(0) rem(20);
+            }
+            p {
+                padding: rem(0) rem(20);
+            }
+        }
+    }
+  }
+  
+  .custom__number {
+    background-color: red;
+    color: black;
+    padding: rem(5) rem(20) rem(6) rem(20);
+    margin-right: rem(10);
+    border-radius: rem(20);
+    font-size: rem(16);
+    line-height: normal;
+  }
