@@ -56,7 +56,6 @@ jumpUpBtn.addEventListener('click', e => {
 
 const heroCallback = function(entries) {
     const [entry] = entries;
-    console.log(entry)
 
     if(entry.isIntersecting) {
         jumpUpBtn.style.display = 'none';
@@ -68,9 +67,40 @@ const heroCallback = function(entries) {
 
 const heroOptions = {
     root: null,
-    threshold: 1,
+    threshold: 0.5,
 }
 
 const heroObserver = new IntersectionObserver(heroCallback, heroOptions);
 
 heroObserver.observe(heroSection);
+
+
+
+//TODO: Change Background Color Jump To Button When It Hovers CTA Section 
+
+const ctaSection = document.querySelector('.cta');
+const jumpIcon = document.querySelector('.jump--top-icon i');
+console.log(jumpIcon);
+
+const ctaCallback = function(entries) {
+    const [entry] = entries;
+    
+    if(entry.isIntersecting) {
+        jumpUpBtn.style.backgroundColor = '#ffffff';
+        jumpIcon.style.color = '#f25f3a';
+    }
+    else {
+        jumpUpBtn.style.backgroundColor = '#f25f3a';
+        jumpIcon.style.color = '#ffffff';
+    }
+
+}
+
+const ctaOptions = {
+    root: null,
+    threshold: 0,
+}
+
+const ctaObserver = new IntersectionObserver(ctaCallback, ctaOptions);
+
+ctaObserver.observe(ctaSection);
