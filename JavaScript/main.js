@@ -12,7 +12,7 @@ const body = document.body;
 
 hamburgerClose.classList.add('hidden');
 overlay.classList.add('hidden');
-menu.classList.add('menu--active');
+// menu.classList.add('menu--active');
 
 hamburgerOpen.addEventListener('click', e => {
     hamburgerOpen.classList.add('hidden');
