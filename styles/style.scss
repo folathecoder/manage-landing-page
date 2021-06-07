@@ -131,8 +131,8 @@ a {
 
 // ======= Typography
  h1 {
-     font-size: rem(40);
-     line-height: rem(50);
+     font-size: rem(35);
+     line-height: rem(45);
      font-weight: $weight-bold;
 
      @include media-query(desktop) {
@@ -144,6 +144,7 @@ a {
 
 .hidden {
     display: none;
+    color: #fde8e3;
 }
 
 // ======= Button 
@@ -215,6 +216,11 @@ a {
             flex: 1;
             padding-top: rem(10);
         }
+
+        img {
+            max-width: rem(110);
+            height: auto;
+        }
         
     }
 
@@ -244,8 +250,21 @@ a {
 
 // ==================  Dropdown 
 .hamburger {
+    border: none;
+    img {
+        // font-size: rem(23);
+        // color: $color-font;
+        // transition: 0.5s;
+        background-color: inherit;
+    }
     @include media-query(tablet) {
         display: none;   
+    }
+
+    &--close {
+        img {
+            background-color: hsla(0, 0%, 0%, 0.08);
+        }
     }
 }
 .menu {
@@ -263,6 +282,7 @@ a {
     justify-content: space-around;
     box-shadow: rem(0) rem(10) rem(20) hsla(220, 10%, 35%, 0.226);
     transition: all 1s linear;
+    padding-top: rem(20);
 
     @include media-query(tablet) {
         background-color: transparent;
@@ -276,16 +296,21 @@ a {
         right: auto;
         left: auto;
         box-shadow: none;
+        padding-top: rem(0);
     }
 
 
     &__item {
-        display: inline-flex;
+        // display: inline-flex;
         margin: rem(0) rem(16.5);
         // background-color: yellow;
         flex: 1;
         text-align: center;
         // margin: rem(70) rem(0);
+
+        @include media-query(tablet) {
+            display: inline-flex;
+        }
         
         a {
             color: $color-font;

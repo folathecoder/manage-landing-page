@@ -56,8 +56,8 @@ a {
 }
 
 h1 {
-  font-size: 2.5rem;
-  line-height: 3.125rem;
+  font-size: 2.1875rem;
+  line-height: 2.8125rem;
   font-weight: 700;
 }
 
@@ -71,6 +71,7 @@ h1 {
 
 .hidden {
   display: none;
+  color: #fde8e3;
 }
 
 .btn {
@@ -158,6 +159,11 @@ h1 {
   }
 }
 
+.header__logo img {
+  max-width: 6.875rem;
+  height: auto;
+}
+
 .header__menu {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -193,10 +199,22 @@ h1 {
   }
 }
 
+.hamburger {
+  border: none;
+}
+
+.hamburger img {
+  background-color: inherit;
+}
+
 @media screen and (min-width: 992px) {
   .hamburger {
     display: none;
   }
+}
+
+.hamburger--close img {
+  background-color: rgba(0, 0, 0, 0.08);
 }
 
 .menu {
@@ -220,6 +238,7 @@ h1 {
           box-shadow: 0rem 0.625rem 1.25rem rgba(80, 86, 98, 0.226);
   -webkit-transition: all 1s linear;
   transition: all 1s linear;
+  padding-top: 1.25rem;
 }
 
 @media screen and (min-width: 992px) {
@@ -237,18 +256,24 @@ h1 {
     left: auto;
     -webkit-box-shadow: none;
             box-shadow: none;
+    padding-top: 0rem;
   }
 }
 
 .menu__item {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
   margin: 0rem 1.03125rem;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   text-align: center;
+}
+
+@media screen and (min-width: 992px) {
+  .menu__item {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
 }
 
 .menu__item a {
