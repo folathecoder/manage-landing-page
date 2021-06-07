@@ -142,6 +142,18 @@ a {
     }
  }
 
+ h2 {
+    font-size: rem(30);
+    line-height: rem(40);
+    font-weight: $weight-bold;
+ }
+
+ h3 {
+    font-size: rem(16);
+    line-height: rem(28);
+    font-weight: $weight-bold;
+ }
+
 .hidden {
     display: none;
     color: #fde8e3;
@@ -189,7 +201,6 @@ a {
     min-height: rem(0);
     z-index: 1000;
     position: relative;
-    // background-color:  yellow;
 
     &__inner {
         max-width: $width-max;
@@ -422,13 +433,13 @@ a {
 
 .explainer {
     max-width: 100%;
-    min-height: rem(100);
+    min-height: rem(0);
     // padding: $padding-container;
   
     &__inner {
         max-width: $width-max;
         min-height: rem(0);
-        margin: rem(0) auto;
+        margin: $center-section;
         display: flex;
         flex-direction: column;
     }
@@ -448,8 +459,9 @@ a {
   
             h3 {
                 display: block;
+                line-height: rem(35);
                 margin-bottom: rem(10);
-                background-color: red;
+                background-color: hsl(12, 87%, 94%);
                 margin-left: rem(20);
                 border-radius: rem(20) rem(0) rem(0) rem(20);
             }
@@ -461,8 +473,8 @@ a {
   }
   
   .custom__number {
-    background-color: red;
-    color: black;
+    background-color: $color-accent;
+    color: $color-neutral;
     padding: rem(5) rem(20) rem(6) rem(20);
     margin-right: rem(10);
     border-radius: rem(20);

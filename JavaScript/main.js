@@ -7,6 +7,8 @@ const hamburger = document.querySelector('.hamburger');
 const overlay = document.querySelector('.overlay');
 const menu = document.querySelector('.menu');
 const body = document.body;
+const header = document.querySelector('.intro__container');
+const jumpUpBtn = document.querySelector('.jump--top'); 
 
 //* Add class to hide gamburger close icon and overlay
 hamburgerClose.classList.add('hidden');
@@ -40,4 +42,11 @@ hamburgerClose.addEventListener('click', e => {
 //* Dropdown Close when the overlay is clicked
 overlay.addEventListener('click', e => {
     closeDropdown();
+})
+
+//TODO: Smooth Scroll To The Top
+
+jumpUpBtn.addEventListener('click', e => {
+    console.log(e.target);
+    header.scrollIntoView({behavior:"smooth"});
 })
