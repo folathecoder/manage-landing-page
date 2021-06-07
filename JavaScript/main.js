@@ -9,6 +9,7 @@ const menu = document.querySelector('.menu');
 const body = document.body;
 const header = document.querySelector('.intro__container');
 const jumpUpBtn = document.querySelector('.jump--top'); 
+const heroSection = document.querySelector('.hero');
 
 //* Add class to hide gamburger close icon and overlay
 hamburgerClose.classList.add('hidden');
@@ -50,3 +51,26 @@ jumpUpBtn.addEventListener('click', e => {
     console.log(e.target);
     header.scrollIntoView({behavior:"smooth"});
 })
+
+//TODO: Hide Jump-to-top Button 
+
+const heroCallback = function(entries) {
+    const [entry] = entries;
+    console.log(entry)
+
+    if(entry.isIntersecting) {
+        jumpUpBtn.style.display = 'none';
+    }
+    else {
+        jumpUpBtn.style.display = 'grid';
+    }
+}
+
+const heroOptions = {
+    root: null,
+    threshold: 1,
+}
+
+const heroObserver = new IntersectionObserver(heroCallback, heroOptions);
+
+heroObserver.observe(heroSection);
