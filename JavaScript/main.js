@@ -69,7 +69,7 @@ const heroCallback = function(entries) {
 
 const heroOptions = {
     root: null,
-    threshold: 0.8,
+    threshold: 0.5,
 }
 
 const heroObserver = new IntersectionObserver(heroCallback, heroOptions);
