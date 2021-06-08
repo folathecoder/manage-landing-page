@@ -10,6 +10,8 @@ const body = document.body;
 const header = document.querySelector('.intro__container');
 const jumpUpBtn = document.querySelector('.jump--top'); 
 const heroSection = document.querySelector('.hero');
+const ctaSection = document.querySelector('.cta');
+const jumpIcon = document.querySelector('.jump--top-icon i');
 
 //* Add class to hide gamburger close icon and overlay
 hamburgerClose.classList.add('hidden');
@@ -67,20 +69,36 @@ const heroCallback = function(entries) {
 
 const heroOptions = {
     root: null,
-    threshold: 0.5,
+    threshold: 0.8,
 }
 
 const heroObserver = new IntersectionObserver(heroCallback, heroOptions);
 
 heroObserver.observe(heroSection);
 
+//TODO: Cookies Pop-Up Message
 
+//* Create Outter and Inner divs
+const cookies = document.createElement('div');
+const cookiesContainer = document.createElement('div');
 
-//TODO: Change Background Color Jump To Button When It Hovers CTA Section 
+//* Append the inner container to the outter container
+cookies.append(cookiesContainer);
 
-const ctaSection = document.querySelector('.cta');
-const jumpIcon = document.querySelector('.jump--top-icon i');
-console.log(jumpIcon);
+//* Add classes
+cookies.classList.add('cookies');
+cookiesContainer.classList.add('cookies__inner');
+
+cookiesContainer.innerHTML = '<p>This site uses cookies to provide you with the best user experience. By using Manage, you accept our <a href="">use of cookies.</a></p>'
+
+//* Attach the cookie container before the header section
+header.before(cookies);
+
+//TODO: Automatically remove the cookie message after 20 seconds of activity or idleness
+
+setTimeout(() => cookies.remove(), 20000);
+
+//TODO: Change Background Color Jump To Button When It Hovers CTA Section + Remove Cookie when user scrolls to CTA Section
 
 const ctaCallback = function(entries) {
     const [entry] = entries;
@@ -88,6 +106,7 @@ const ctaCallback = function(entries) {
     if(entry.isIntersecting) {
         jumpUpBtn.style.backgroundColor = '#ffffff';
         jumpIcon.style.color = '#f25f3a';
+        cookies.remove();
     }
     else {
         jumpUpBtn.style.backgroundColor = '#f25f3a';

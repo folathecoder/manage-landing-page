@@ -579,11 +579,14 @@ a {
     @include media-query(tablet) {
         min-height: rem(220);
         background-image: url(../images/bg-simplify-section-desktop.svg);
-        background-position: rem(200) rem(0);
+        background-repeat: no-repeat;
+        background-size: rem(1400) auto;
+        background-position: rem(200) rem(-80);
+
     }
   
     &__inner {
-        // background-color: pink;
+        background-color: transparent;
         width: $width-max;
         min-height: rem(0);
         margin: $center-section;
@@ -629,3 +632,132 @@ a {
           background-color: $color-neutral;
       }
   }
+
+
+
+  // ========= Footer
+
+  .footer {
+      max-width: 100%;
+      min-height: rem(250);
+      background-color: $color-footer-bg;
+      display: flex;
+      align-items: center;
+
+      &__inner {
+        //   background-color: yellow;
+          width: $width-max;
+          margin: $center-section;
+          display: flex;
+
+          & > * {
+              flex: 1;
+          }
+      }
+  }
+
+  .foot {
+      padding: rem(20);
+  }
+
+  .foot--1, .foot--4 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  }
+  .foot--icons {
+      display: flex;
+      
+      & > * {
+          flex: 1;
+      }
+  }
+  .foot--menu {
+      a {
+          color: $color-neutral;
+          font-size: rem(15);
+          font-weight: $weight-regular;
+          line-height: rem(35);
+
+          &:hover {
+              transition: 0.5s;
+              color: $color-accent;
+          }
+      }
+  }
+
+  .foot--icons img:hover {
+      color: $color-accent;
+  }
+
+  .foot--form {
+      display: flex;
+  }
+
+   .foot--input{
+      background-color: $color-neutral;
+      height: rem(44);
+      max-width: rem(200);
+      border-radius: rem(40);
+      font-size: rem(13);
+      padding: rem(0) rem(10);
+      border-color: $color-accent;
+  }
+
+  .foot--btn {
+      width: rem(64);
+      height: rem(44);
+      padding: rem(0);
+      margin-left: rem(7);
+      border-color: transparent;
+      cursor: pointer;
+
+  }
+
+  .foot--copyright {
+      text-align: right;
+      font-size: rem(13);
+      color: rgba(255, 255, 255, 0.397);
+  }
+
+//   .foot--4 {
+//       flex: 2;
+//       background-color: #fff;
+//   }
+
+
+
+// =========== Cookies
+
+.cookies {
+    background-color: $color-accent;
+    min-height: rem(50);
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: none;
+
+    @include media-query(tablet) {
+        display: flex;
+    }
+
+    &__inner {
+        max-width: $width-max;
+        margin: $center-section;
+        text-align: center;
+    }
+
+    p {
+        color: $color-neutral;
+    }
+
+    a {
+        color: $color-footer-bg;
+        text-decoration: underline;
+    }
+}
