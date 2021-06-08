@@ -636,8 +636,151 @@ a {
 
 
   // ========= Footer
+.footer {
+    background-color: $color-footer-bg;
+    max-width: 100%;
+    min-height: rem(0);
+    padding: rem(24);
 
-  .footer {
+    &__inner {
+        max-width: $width-max;
+        min-height: rem(0);
+        // background-color: yellow;
+        margin: $center-section;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "foot1 foot1"
+        "foot2 foot3"
+        "foot4 foot4";
+        grid-template-rows: auto;
+
+        & > * {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+
+}
+
+.foot--1 {
+    // background-color: blue;
+    grid-area: foot4;
+    flex-direction: column-reverse;
+    min-height: rem(100);
+    padding-top: rem(24);
+    // align-items: center;
+
+    // img {
+    //     text-align: center;
+    // }
+    
+}
+.foot--2 {
+    // background-color: pink;
+    grid-area: foot2;
+}
+.foot--3 {
+    // background-color: black;
+    grid-area: foot3;
+}
+.foot--4 {
+    // background-color: lemonchiffon;
+    grid-area: foot1;
+    padding: rem(25) rem(0);
+}
+.foot--logo {
+    align-self: center;
+    padding: rem(40) rem(0) rem(25) rem(0);
+}
+.foot--icons {
+    // background-color: red;
+    display: flex;
+    justify-content: space-between;
+    img {
+        height: rem(32);
+        width: auto;
+    }
+}
+
+.foot--form {
+    // background-color: yellow;
+    display: flex;
+
+    &__input {
+        flex: 6;
+        // background-color: black;
+    }
+
+    &__button {
+        flex: 1;
+        // background-color: green;
+    }
+}
+
+.foot--input{
+    display: block;
+    background-color: $color-neutral;
+    height: rem(44);
+    width: 100%;
+    border-radius: rem(40);
+    font-size: rem(13);
+    padding: rem(0) rem(10);
+    border-color: $color-accent;
+}
+
+.foot--btn {
+    width: rem(64);
+    height: rem(44);
+    padding: rem(0);
+    margin-left: rem(8);
+    border-color: transparent;
+    cursor: pointer;
+
+}
+
+.foot--copyright {
+    text-align: center;
+    font-size: rem(13);
+    color: rgba(255, 255, 255, 0.397);
+}
+
+.copyright__tablet {
+    display: none;
+}
+
+.foot--menu {
+    padding-left: rem(25);
+    a {
+        color: $color-neutral;
+        font-size: rem(15);
+        font-weight: $weight-regular;
+        line-height: rem(35);
+
+        &:hover {
+            transition: 0.5s;
+            color: $color-accent;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@include media-query(tablet) {
+      .footer {
       max-width: 100%;
       min-height: rem(250);
       background-color: $color-footer-bg;
@@ -672,19 +815,6 @@ a {
           flex: 1;
       }
   }
-  .foot--menu {
-      a {
-          color: $color-neutral;
-          font-size: rem(15);
-          font-weight: $weight-regular;
-          line-height: rem(35);
-
-          &:hover {
-              transition: 0.5s;
-              color: $color-accent;
-          }
-      }
-  }
 
   .foot--icons img:hover {
       color: $color-accent;
@@ -694,36 +824,56 @@ a {
       display: flex;
   }
 
-   .foot--input{
-      background-color: $color-neutral;
-      height: rem(44);
-      max-width: rem(200);
-      border-radius: rem(40);
-      font-size: rem(13);
-      padding: rem(0) rem(10);
-      border-color: $color-accent;
-  }
+//    .foot--input{
+//       background-color: $color-neutral;
+//       height: rem(44);
+//       max-width: rem(200);
+//       border-radius: rem(40);
+//       font-size: rem(13);
+//       padding: rem(0) rem(10);
+//       border-color: $color-accent;
+//   }
 
-  .foot--btn {
-      width: rem(64);
-      height: rem(44);
-      padding: rem(0);
-      margin-left: rem(7);
-      border-color: transparent;
-      cursor: pointer;
+//   .foot--btn {
+//       width: rem(64);
+//       height: rem(44);
+//       padding: rem(0);
+//       margin-left: rem(7);
+//       border-color: transparent;
+//       cursor: pointer;
 
-  }
+//   }
 
   .foot--copyright {
       text-align: right;
-      font-size: rem(13);
-      color: rgba(255, 255, 255, 0.397);
   }
 
-//   .foot--4 {
-//       flex: 2;
-//       background-color: #fff;
-//   }
+  .foot--4 {
+      flex: 2;
+      background-color: #fff;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
