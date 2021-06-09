@@ -576,6 +576,118 @@ h3 {
   color: #fbf4f3;
 }
 
+.testimonial {
+  max-width: 100%;
+  min-height: 36.375rem;
+}
+
+.testimonial__heading {
+  text-align: center;
+  padding: 2.5rem 0rem 6.25rem 0rem;
+}
+
+.testimonial__bio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.testimonial__bio img {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 100%;
+  -webkit-transform: translateY(-2.25rem);
+          transform: translateY(-2.25rem);
+  position: absolute;
+}
+
+.testimonial__bio p {
+  font-weight: 700;
+  -webkit-transform: translateY(2.25rem);
+          transform: translateY(2.25rem);
+  padding: 0.9375rem 0rem 1.25rem 0rem;
+}
+
+.testimonial__content {
+  text-align: center;
+  -webkit-transform: translateY(2.25rem);
+          transform: translateY(2.25rem);
+}
+
+.testimonial__content p {
+  font-size: 0.875rem;
+  line-height: 1.625rem;
+  padding: 0rem 0.625rem;
+}
+
+.testimonial__button {
+  text-align: center;
+  padding: 1.25rem 0rem 3.125rem 0rem;
+}
+
+.slider {
+  position: relative;
+  height: 17.75rem;
+  max-width: 100%;
+  overflow-y: hidden;
+}
+
+.slide {
+  height: 17.75rem;
+  max-width: 21.25rem;
+  margin: 0px auto;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -10.625rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.slide__inner {
+  background-color: #97979713;
+  height: 15.5rem;
+  max-width: 21.25rem;
+}
+
+.slider__states--container {
+  max-width: 100%;
+  background-color: #fbf4f3;
+}
+
+.slider__states {
+  background-color: yellow;
+  height: 3.75rem;
+  max-width: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0px auto;
+}
+
+.slider__state {
+  height: 0.4375rem;
+  width: 0.4375rem;
+  background-color: #fbf4f3;
+  border-radius: 100%;
+  border: 0.0625rem solid #f25f3a;
+  cursor: pointer;
+}
+
 .cta {
   max-width: 100%;
   min-height: 25.3125rem;
@@ -805,6 +917,14 @@ h3 {
   margin-left: 0.5rem;
   border-color: transparent;
   cursor: pointer;
+}
+
+.email--error {
+  display: none;
+  font-size: 0.625rem;
+  font-style: italic;
+  color: #f23a3a;
+  padding-left: 0.9375rem;
 }
 
 .foot--copyright {

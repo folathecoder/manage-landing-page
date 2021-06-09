@@ -123,3 +123,42 @@ const ctaOptions = {
 const ctaObserver = new IntersectionObserver(ctaCallback, ctaOptions);
 
 ctaObserver.observe(ctaSection);
+
+
+//TODO: Email Validation 
+
+const email = document.querySelector("#email");
+const errorMessage = document.querySelector('.email--error');
+
+console.log(email.value);
+
+let regExp = /^[^ ]+@[^ ]+.[a-z]{2,3}$/;
+
+function emailValidation() {
+    if(email.value.match(regExp)) {
+        errorMessage.style.display = "none";
+        email.style.borderColor = "#f25f3a";
+    }
+    else {
+        alert("Error");
+        // errorMessage.style.display = "block";
+        // email.style.borderColor = "#F33C3C";
+    }
+    // if (email.value == ""){
+    //     errorMessage.style.display = "block";
+    //     email.style.borderColor = "#f99076";
+    // }
+};
+
+// emailValidation();
+
+
+//TODO: Slider Component
+
+const slides = document.querySelectorAll('.slide');
+
+let currentSlide = -1;
+
+slides.forEach((s,i) => {
+    s.style.transform = `translateX(${100 * (currentSlide + i)}%)`;
+})
