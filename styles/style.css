@@ -633,7 +633,15 @@ h3 {
   position: relative;
   height: 17.75rem;
   max-width: 100%;
-  overflow-y: hidden;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
 }
 
 .slide {
@@ -653,19 +661,24 @@ h3 {
 }
 
 .slide__inner {
-  background-color: #97979713;
+  background-color: #97979707;
   height: 15.5rem;
   max-width: 21.25rem;
 }
 
 .slider__states--container {
   max-width: 100%;
-  background-color: #fbf4f3;
+  background-color: #f2f2f2;
+}
+
+@media screen and (min-width: 992px) {
+  .slider__states--container {
+    display: none;
+  }
 }
 
 .slider__states {
-  background-color: yellow;
-  height: 3.75rem;
+  height: 3.125rem;
   max-width: 15%;
   display: -webkit-box;
   display: -ms-flexbox;

@@ -156,9 +156,30 @@ function emailValidation() {
 //TODO: Slider Component
 
 const slides = document.querySelectorAll('.slide');
+const testButton = document.querySelector('.testimonial__btn');
 
 let currentSlide = -1;
+const maxSlide = slides.length;
 
 slides.forEach((s,i) => {
     s.style.transform = `translateX(${100 * (currentSlide + i)}%)`;
+})
+
+
+testButton.addEventListener('click', e => {
+    e.preventDefault();
+
+    if (currentSlide === (maxSlide + 1)) {
+        currentSlide = -1;
+      }
+    else {
+    currentSlide--;
+    }
+    // if (maxSlide ==){
+
+    // }
+    slides.forEach((s,i) => {
+        s.style.transform = `translateX(${100 * (currentSlide + i)}%)`;
+        console.log(i);
+    })
 })

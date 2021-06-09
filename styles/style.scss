@@ -610,11 +610,16 @@ a {
     position: relative;
     height: rem(284);
     max-width: 100%;
-    overflow-y: hidden;
+    overflow-y: scroll;
     // padding-top: rem(300);
     // min-height: ;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
 
+.slider::-webkit-scrollbar {
+    display: none;
+}
 .slide {
     // background-color: blue;
     // background-color: #97979713;
@@ -629,7 +634,7 @@ a {
     align-items: flex-end;
 
     &__inner {
-        background-color: #97979713;
+        background-color: #97979707;
         height: rem(248);
         max-width: rem(340);
     }
@@ -638,14 +643,21 @@ a {
 
 .slider__states--container {
     max-width: 100%;
-    background-color: $color-neutral;
+    background-color: $color-bg;
     // transform: translateY(rem(-20));
+    // height: rem(70);
     // z-index: 10;
+
+    @include media-query(tablet) {
+        display: none;
+    }
+
+    
 }
 
 .slider__states {
-    background-color: yellow;
-    height: rem(60);
+    // background-color: yellow;
+    height: rem(50);
     max-width: 15%;
     display: flex;
     justify-content: space-between;
