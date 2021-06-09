@@ -121,10 +121,6 @@ body {
     text-rendering: optimizeSpeed;
 }
 
-// section {
-//     padding: $section-padding;
-// }
-
 a {
     text-decoration: none;
 }
@@ -156,11 +152,6 @@ a {
     font-size: rem(16);
     line-height: rem(28);
     font-weight: $weight-bold;
-
-    // @include media-query(tablet) {
-    //     font-size: rem(40);
-    //     line-height: rem(28); 
-    // }
  }
 
 .hidden {
@@ -170,8 +161,6 @@ a {
 // ======= Button 
 
 .btn {
-    // max-width: rem(137);
-    // height: rem(44);
     padding: rem(12) rem(32) rem(16) rem(32);
     border-radius: rem(50);
     background-color: $color-accent;
@@ -186,10 +175,19 @@ a {
     }
 }
 
+.hero__bg {
+    background-image: url(../images/bg-tablet-pattern-2.svg);
+    background-repeat: no-repeat;
+    background-size: rem(300) auto;
+    background-position: rem(230) rem(490);
+    @include media-query(large-mobile) {
+        background-image: none;
+    }
+}
+
 .intro__container {
     max-width: 100%;
     min-height: rem(0);
-    // background-color: red;
     padding: $section-padding;
     padding-top: rem(45);
     background-image: url(../images/bg-tablet-pattern.svg);
@@ -197,6 +195,14 @@ a {
     background-size: rem(400) auto;
     background-position: rem(50) rem(-50);
 
+    @include media-query(large-mobile) {
+        background-size: rem(600) auto;
+        background-position: rem(300) rem(-50);
+    }
+    @include media-query(tablet-mini) {
+        background-size: rem(700) auto;
+        background-position: rem(500) rem(-150);
+    }
     @include media-query(desktop) {
         padding-top: rem(60);
         background-size: rem(800) auto;
@@ -214,14 +220,12 @@ a {
         max-width: $width-max;
         min-height: rem(44);
         margin: $center-section;
-        // background-color: black;
         display: flex;
         align-items: center;
 
         @include media-query(tablet) {
             min-height: rem(64);
         }
-
         & > * {
             @include media-query(tablet) {
                 flex: 1;
@@ -243,17 +247,14 @@ a {
             @include media-query(tablet) {
                 max-width: rem(147);
             }
-        }
-        
+        } 
     }
 
     &__menu {
-        // background-color: red;
         flex: 1;
         display: flex;
         justify-content: flex-end;
         @include media-query(tablet) {
-            // display: block;
             justify-content: center;
             flex: 4;
         }
@@ -270,14 +271,10 @@ a {
     }
 }
 
-
 // ==================  Dropdown 
 .hamburger {
     border: none;
     img {
-        // font-size: rem(23);
-        // color: $color-font;
-        // transition: 0.5s;
         background-color: inherit;
     }
     @include media-query(tablet) {
@@ -296,9 +293,7 @@ a {
     right: 0;
     left: 0;
     margin-top: rem(37);
-    // margin: rem(24);
     min-height: rem(291);
-    // max-width: rem(325);
     border-radius: rem(4);
     display: flex;
     flex-direction: column;
@@ -310,9 +305,7 @@ a {
     @include media-query(tablet) {
         background-color: transparent;
         position: initial;
-        // display: flex;
         flex-direction: row;
-        // justify-content: auto;
         margin-top: rem(0);
         min-height: rem(0);
         border-radius: rem(0);
@@ -322,14 +315,10 @@ a {
         padding-top: rem(0);
     }
 
-
     &__item {
-        // display: inline-flex;
         margin: rem(0) rem(16.5);
-        // background-color: yellow;
         flex: 1;
         text-align: center;
-        // margin: rem(70) rem(0);
 
         @include media-query(tablet) {
             display: inline-flex;
@@ -353,7 +342,6 @@ a {
     @include media-query(tablet) {
         display: block;   
     }
-
 }
 
 .overlay {
@@ -364,7 +352,6 @@ a {
     right: 0;
     left: 0;
     bottom: 0;
-    // background-color: yellow;
     background-image: linear-gradient(180deg, #00000000, #000000);
     transition: 1s;
 
@@ -373,26 +360,15 @@ a {
     }
 }
 
-
-
-
-
-
-
-
-
-
 // ========== Hero
 
 .hero {
-    // background-color: blue;
     max-width: 100%;
     min-height: rem(0);
 
     &__inner {
         max-width: $width-max;
         margin: $center-section;
-        // background-color: rgb(30, 187, 16);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -406,7 +382,6 @@ a {
     }
 
     &__image{
-        // background-color: pink;
         min-height: rem(315);
         display: flex;
         align-items: center;
@@ -417,13 +392,11 @@ a {
 
     &__content {
         min-height: rem(409);
-        // background-color: orange;
         text-align: center;
 
         @include media-query(tablet) {
             flex: 1;
             min-height: rem(0);
-            // background-color: yellow;
             text-align: left;
             align-content: center;
         }
@@ -439,14 +412,17 @@ a {
     }
 }
 
+.hero__background {
+    background-color: red;
+    width: 100%;
+}
+
 
 
 // ========== Section: What’s different about Manage?
-
 .explainer {
     max-width: 100%;
     min-height: rem(0);
-    // padding: $padding-container;
   
     &__inner {
         max-width: $width-max;
@@ -522,9 +498,6 @@ a {
     line-height: normal;
   }
 
-
-
-
   .jump--top {
       position: fixed;
       bottom: 0;
@@ -549,8 +522,6 @@ a {
           100% {transform: rotateZ(720deg);}
       }
 
-
-
       i {
           font-size: rem(30);
           color: $color-neutral;
@@ -568,6 +539,9 @@ a {
     &__heading {
         text-align: center;
         padding: rem(40) rem(0) rem(60) rem(0);
+        @include media-query (tablet) {
+            padding-top: rem(150);
+        }
     }
 
     &__bio {
@@ -602,6 +576,10 @@ a {
     &__button {
         text-align: center;
         padding: rem(20) rem(0) rem(50) rem(0);
+
+        @include media-query (tablet) {
+            padding-bottom: rem(178);
+        }
     }
 
 }
@@ -611,6 +589,7 @@ a {
     height: rem(284);
     max-width: 100%;
     overflow-y: scroll;
+    z-index: 20;
     // padding-top: rem(300);
     // min-height: ;
     -ms-overflow-style: none;  /* IE and Edge */
@@ -633,10 +612,20 @@ a {
     display: flex;
     align-items: flex-end;
 
+    @include media-query(tablet) {
+        max-width: 34vw;
+        margin-left: -16.5vw;
+    }
+
     &__inner {
-        background-color: #97979707;
+        // background-color: #97979718;
+        background-color: $color-neutral;
         height: rem(248);
         max-width: rem(340);
+
+        @include media-query(tablet) {
+            max-width: 95%;
+        }
     }
     
 }
@@ -644,9 +633,6 @@ a {
 .slider__states--container {
     max-width: 100%;
     background-color: $color-bg;
-    // transform: translateY(rem(-20));
-    // height: rem(70);
-    // z-index: 10;
 
     @include media-query(tablet) {
         display: none;
@@ -1001,5 +987,16 @@ a {
     a {
         color: $color-footer-bg;
         text-decoration: underline;
+    }
+}
+
+.section__bg {
+    @include media-query(tablet) {
+        max-width: 100%;
+        background-image: url(/images/bg-tablet-pattern-3.svg);
+        background-repeat: no-repeat;
+        background-repeat: no-repeat;
+        background-size: rem(700) auto;
+        background-position: rem(-300) rem(300);
     }
 }

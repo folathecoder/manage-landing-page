@@ -110,6 +110,19 @@ h3 {
   background-color: #f99076;
 }
 
+.hero__bg {
+  background-image: url(../images/bg-tablet-pattern-2.svg);
+  background-repeat: no-repeat;
+  background-size: 18.75rem auto;
+  background-position: 14.375rem 30.625rem;
+}
+
+@media screen and (min-width: 602px) {
+  .hero__bg {
+    background-image: none;
+  }
+}
+
 .intro__container {
   max-width: 100%;
   min-height: 0rem;
@@ -119,6 +132,20 @@ h3 {
   background-repeat: no-repeat;
   background-size: 25rem auto;
   background-position: 3.125rem -3.125rem;
+}
+
+@media screen and (min-width: 602px) {
+  .intro__container {
+    background-size: 37.5rem auto;
+    background-position: 18.75rem -3.125rem;
+  }
+}
+
+@media screen and (min-width: 786px) {
+  .intro__container {
+    background-size: 43.75rem auto;
+    background-position: 31.25rem -9.375rem;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -420,6 +447,11 @@ h3 {
   }
 }
 
+.hero__background {
+  background-color: red;
+  width: 100%;
+}
+
 .explainer {
   max-width: 100%;
   min-height: 0rem;
@@ -586,6 +618,12 @@ h3 {
   padding: 2.5rem 0rem 3.75rem 0rem;
 }
 
+@media screen and (min-width: 992px) {
+  .testimonial__heading {
+    padding-top: 9.375rem;
+  }
+}
+
 .testimonial__bio {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -629,11 +667,18 @@ h3 {
   padding: 1.25rem 0rem 3.125rem 0rem;
 }
 
+@media screen and (min-width: 992px) {
+  .testimonial__button {
+    padding-bottom: 11.125rem;
+  }
+}
+
 .slider {
   position: relative;
   height: 17.75rem;
   max-width: 100%;
   overflow-y: scroll;
+  z-index: 20;
   -ms-overflow-style: none;
   /* IE and Edge */
   scrollbar-width: none;
@@ -660,10 +705,23 @@ h3 {
           align-items: flex-end;
 }
 
+@media screen and (min-width: 992px) {
+  .slide {
+    max-width: 34vw;
+    margin-left: -16.5vw;
+  }
+}
+
 .slide__inner {
-  background-color: #97979707;
+  background-color: #fbf4f3;
   height: 15.5rem;
   max-width: 21.25rem;
+}
+
+@media screen and (min-width: 992px) {
+  .slide__inner {
+    max-width: 95%;
+  }
 }
 
 .slider__states--container {
@@ -1089,5 +1147,16 @@ h3 {
 .cookies a {
   color: #1d1e25;
   text-decoration: underline;
+}
+
+@media screen and (min-width: 992px) {
+  .section__bg {
+    max-width: 100%;
+    background-image: url(/images/bg-tablet-pattern-3.svg);
+    background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    background-size: 43.75rem auto;
+    background-position: -18.75rem 18.75rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
