@@ -127,30 +127,49 @@ ctaObserver.observe(ctaSection);
 
 //TODO: Email Validation 
 
+const form = document.querySelector('.foot--form');
 const email = document.querySelector("#email");
 const errorMessage = document.querySelector('.email--error');
 
 console.log(email.value);
 
-let regExp = /^[^ ]+@[^ ]+.[a-z]{2,3}$/;
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    checkInputs();
+})
 
-function emailValidation() {
-    if(email.value.match(regExp)) {
-        errorMessage.style.display = "none";
-        email.style.borderColor = "#f25f3a";
-    }
-    else {
-        alert("Error");
-        // errorMessage.style.display = "block";
-        // email.style.borderColor = "#F33C3C";
-    }
-    // if (email.value == ""){
-    //     errorMessage.style.display = "block";
-    //     email.style.borderColor = "#f99076";
-    // }
-};
+const checkInputs = function() {
+    //* Get value from input
+    const emailValue = email.value.trim();
+    console.log(emailValue);
+
+}
+
+// let regExp = /^[^ ]+@[^ ]+.[a-z]{2,3}$/;
+
+// function emailValidation() {
+//     if(email.value.match(regExp)) {
+//         errorMessage.style.display = "none";
+//         email.style.borderColor = "#f25f3a";
+//     }
+//     else {
+//         alert("Error");
+//         // errorMessage.style.display = "block";
+//         // email.style.borderColor = "#F33C3C";
+//     }
+//     // if (email.value == ""){
+//     //     errorMessage.style.display = "block";
+//     //     email.style.borderColor = "#f99076";
+//     // }
+// };
 
 // emailValidation();
+
+const footButton = document.querySelector('.foot--btn');
+
+footButton.addEventListener('click', e => {
+    errorMessage.classList.add('error--active');
+})
 
 
 //TODO: Slider Component
@@ -162,6 +181,7 @@ let currentSlide = -1;
 const maxSlide = slides.length;
 
 slides.forEach((s,i) => {
+    s.style.transition = `1s linear`;
     s.style.transform = `translateX(${100 * (currentSlide + i)}%)`;
 })
 

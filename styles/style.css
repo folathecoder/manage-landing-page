@@ -992,10 +992,74 @@ h3 {
 
 .email--error {
   display: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: translateX(3.125rem);
+          transform: translateX(3.125rem);
   font-size: 0.625rem;
   font-style: italic;
   color: #f23a3a;
   padding-left: 0.9375rem;
+}
+
+.error--active {
+  display: block;
+  -webkit-animation: error 0.5s both;
+          animation: error 0.5s both;
+}
+
+@-webkit-keyframes error {
+  0% {
+    -webkit-transform: translateX(3.125rem);
+            transform: translateX(3.125rem);
+  }
+  20% {
+    -webkit-transform: translateX(0rem);
+            transform: translateX(0rem);
+  }
+  40% {
+    -webkit-transform: translateX(0.3125rem);
+            transform: translateX(0.3125rem);
+  }
+  60% {
+    -webkit-transform: translateX(0rem);
+            transform: translateX(0rem);
+  }
+  80% {
+    -webkit-transform: translateX(0.1875rem);
+            transform: translateX(0.1875rem);
+  }
+  100% {
+    -webkit-transform: translateX(0rem);
+            transform: translateX(0rem);
+  }
+}
+
+@keyframes error {
+  0% {
+    -webkit-transform: translateX(3.125rem);
+            transform: translateX(3.125rem);
+  }
+  20% {
+    -webkit-transform: translateX(0rem);
+            transform: translateX(0rem);
+  }
+  40% {
+    -webkit-transform: translateX(0.3125rem);
+            transform: translateX(0.3125rem);
+  }
+  60% {
+    -webkit-transform: translateX(0rem);
+            transform: translateX(0rem);
+  }
+  80% {
+    -webkit-transform: translateX(0.1875rem);
+            transform: translateX(0.1875rem);
+  }
+  100% {
+    -webkit-transform: translateX(0rem);
+            transform: translateX(0rem);
+  }
 }
 
 .foot--copyright {
