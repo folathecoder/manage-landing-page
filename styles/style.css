@@ -652,6 +652,10 @@ h3 {
   color: #f25f3a;
 }
 
+.swiper-pagination-bullet-active {
+  background: red;
+}
+
 @media screen and (min-width: 992px) {
   .section__bg {
     max-width: 100%;
