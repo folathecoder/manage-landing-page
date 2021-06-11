@@ -605,7 +605,7 @@ h3 {
 }
 
 .testimonial__content p {
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 1.625rem;
   padding: 0rem 0.625rem;
 }
@@ -622,7 +622,8 @@ h3 {
 }
 
 .swiper-container {
-  max-width: 100%;
+  min-height: 300px;
+  max-width: 600px;
 }
 
 .swiper-wrapper {
@@ -649,11 +650,24 @@ h3 {
 }
 
 .swiper-button-next, .swiper-button-prev {
-  color: #f25f3a;
+  display: none !important;
+}
+
+@media screen and (min-width: 992px) {
+  .swiper-button-next, .swiper-button-prev {
+    display: block !important;
+    color: #f25f3a !important;
+  }
 }
 
 .swiper-pagination-bullet-active {
-  background: red;
+  background: #f25f3a !important;
+}
+
+.bio img {
+  position: absolute;
+  -webkit-transform: translateX(1.25rem), translateY(-2.5rem);
+          transform: translateX(1.25rem), translateY(-2.5rem);
 }
 
 @media screen and (min-width: 992px) {
@@ -1171,10 +1185,5 @@ h3 {
 .jump--top i {
   font-size: 1.875rem;
   color: #fbf4f3;
-}
-
-.swiper-container {
-  width: 600px;
-  min-height: 300px;
 }
 /*# sourceMappingURL=style.css.map */
