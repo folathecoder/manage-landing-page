@@ -1,0 +1,35 @@
+// ===== media-queries
+@mixin media-query ($size) {
+    @if $size == desktop {
+        @media screen and (min-width: 1200px) {
+            @content;
+        }
+    }
+    @else if $size == tablet {
+        @media screen and (min-width: 992px) {
+            @content;
+        }
+    } 
+    @else if $size == tablet-mini {
+        @media screen and (min-width: 786px) {
+            @content;
+        }
+    } 
+    @else if $size == large-mobile {
+        @media screen and (min-width: 602px) {
+            @content;
+        }
+    } 
+    @else if $size == mobile {
+        @media screen and (min-width: 300px) {
+            @content;
+        }
+    } 
+    @else if $size == mobile-mini {
+        @media screen and (min-width: 300px) {
+            @content;
+        }
+    } 
+    }
+    
+    //* ==============================================================================

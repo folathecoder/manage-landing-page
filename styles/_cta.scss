@@ -1,0 +1,70 @@
+// ========== Section: CTA
+.cta {
+    max-width: 100%;
+    min-height: rem(405);
+    background-color: $color-accent;
+    display: flex;
+    align-items: center;
+    background-image: url(../images/bg-simplify-section-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: rem(100) auto;
+    background-position: rem(0) rem(65);
+
+    @include media-query(tablet) {
+        padding: $section-padding;
+        min-height: rem(220);
+        background-image: url(../images/bg-simplify-section-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: rem(1400) auto;
+        background-position: rem(200) rem(-80);
+
+    }
+  
+    &__inner {
+        background-color: transparent;
+        width: $width-max;
+        min-height: rem(0);
+        margin: $center-section;
+        text-align: center;
+        
+        @include media-query(tablet) {
+            display: flex;
+            align-items: center;
+            text-align: left;
+
+            & > * {
+                flex: 1;
+            }
+        }
+  
+        h2 {
+          color: $color-neutral;
+          font-size: rem(40);
+          line-height: rem(50);
+          margin: rem(20) rem(20) rem(40) rem(20);
+
+          @include media-query(tablet) {
+            margin: rem(0) rem(0) rem(0) rem(0);
+          }
+        }
+    }
+  }
+
+  .cta__button {
+      @include media-query(tablet) {
+          text-align: right;
+      }
+  }
+
+  .btn--cta {
+      background-color: $color-neutral;
+      color: $color-accent;
+
+      &:hover {
+          transition: 0.5s;
+          color: $color-accent-active;
+          background-color: $color-neutral;
+      }
+  }
+
+//* ==============================================================================

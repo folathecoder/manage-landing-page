@@ -1,0 +1,36 @@
+// ===== converts pixels to rem
+@function rem($size) {
+    $remSize: $size / 16;
+    @return #{$remSize}rem;
+}
+
+// ===== font family  
+$font-primary: 'Be Vietnam', sans-serif;
+
+// ==== font weights 
+$weight-bold: 700;
+$weight-regular: 500;
+$weight-light: 400;
+
+// ==== colors 
+$color-accent: hsl(12, 88%, 59%);
+$color-font: hsl(228, 39%, 23%); 
+$color-footer-bg: hsl(233, 12%, 13%);
+$color-bg: hsl(0, 0%, 95%);
+$color-neutral: hsl(9, 54%, 97%);
+$color-accent-active: hsl(12, 92%, 72%);
+
+// ==== max-width
+$width-max: rem(1110);
+
+// ==== center section
+$center-section: 0px auto;
+
+// === section padding
+$section-padding: rem(0) rem(24);
+
+//* ==============================================================================
+
+.hidden {
+    display: none;
+}

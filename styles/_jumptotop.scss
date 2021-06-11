@@ -1,0 +1,31 @@
+.jump--top {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: rem(15);
+    width: rem(50);
+    height: rem(50);
+    background-color: $color-accent;
+    border-radius: 100%;
+    box-shadow: rem(5) rem(5)rem(50) rgba(0, 0, 0, 0.247);
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    animation: jump 3s ease-in-out;
+
+    @include media-query(tablet) {
+      margin: rem(15);
+    }
+
+    @keyframes jump {
+        0% {transform: rotateZ(0deg);}
+        100% {transform: rotateZ(720deg);}
+    }
+
+    i {
+        font-size: rem(30);
+        color: $color-neutral;
+    }
+}
+
+//* ==============================================================================

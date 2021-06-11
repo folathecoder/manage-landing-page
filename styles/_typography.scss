@@ -1,0 +1,33 @@
+a {
+    text-decoration: none;
+}
+
+ h1 {
+     font-size: rem(35);
+     line-height: rem(45);
+     font-weight: $weight-bold;
+
+     @include media-query(desktop) {
+        font-size: rem(56);
+        line-height: rem(64);
+        font-weight: $weight-bold;
+    }
+ }
+
+ h2 {
+    font-size: rem(30);
+    line-height: rem(40);
+    font-weight: $weight-bold;
+    @include media-query(tablet) {
+        font-size: rem(40);
+        line-height: rem(44);
+    }
+ }
+
+ h3 {
+    font-size: rem(16);
+    line-height: rem(28);
+    font-weight: $weight-bold;
+ }
+
+//* ==============================================================================

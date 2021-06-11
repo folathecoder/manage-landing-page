@@ -1,0 +1,80 @@
+// ========== Section: What’s different about Manage?
+.explainer {
+    max-width: 100%;
+    min-height: rem(0);
+  
+    &__inner {
+        max-width: $width-max;
+        min-height: rem(0);
+        margin: $center-section;
+        display: flex;
+        flex-direction: column;
+        
+        @include media-query(tablet) {
+            flex-direction: row;
+        }
+    }
+    &__area1 {
+        text-align: center;
+        padding: $section-padding;
+
+        @include media-query(tablet) {
+            text-align: left;
+            flex: 1;
+        }
+  
+        h2 {
+            margin: rem(20) rem(30);
+            @include media-query(tablet) {
+                margin: rem(20) rem(0);
+            }
+        }
+        p {
+            @include media-query(tablet) {
+                padding: rem(10) rem(200) rem(0) rem(0);
+            }
+        }
+    }
+  
+    &__area2 {
+
+        @include media-query(tablet) {
+            flex: 1;
+        }
+  
+        &-service {
+            margin: rem(40) rem(0);
+  
+            h3 {
+                display: block;
+                line-height: rem(35);
+                margin-bottom: rem(10);
+                background-color: hsl(12, 87%, 94%);
+                margin-left: rem(20);
+                border-radius: rem(20) rem(0) rem(0) rem(20);
+                @include media-query(tablet) {
+                    background-color: transparent;
+                }
+            }
+            p {
+                padding: rem(0) rem(20);
+
+                @include media-query(tablet) {
+                    padding-top: rem(20)
+                }
+            }
+        }
+    }
+  }
+  
+  .custom__number {
+    background-color: $color-accent;
+    color: $color-neutral;
+    padding: rem(5) rem(20) rem(6) rem(20);
+    margin-right: rem(10);
+    border-radius: rem(20);
+    font-size: rem(16);
+    line-height: normal;
+  }
+
+//* ==============================================================================

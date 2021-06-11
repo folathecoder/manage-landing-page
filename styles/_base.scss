@@ -1,0 +1,13 @@
+// ======= BASE STYLES
+body {
+    background-color: $color-bg;
+    color: $color-font;
+    max-width: 100%;
+    min-height: 100vh;
+    position: relative;
+    font-family: $font-primary;
+    font-size: rem(16);
+    line-height: rem(28);
+    font-weight: $weight-light;
+    text-rendering: optimizeSpeed;
+}

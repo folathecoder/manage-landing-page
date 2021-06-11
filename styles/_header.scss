@@ -1,0 +1,185 @@
+
+.hero__bg {
+    background-image: url(../images/bg-tablet-pattern-2.svg);
+    background-repeat: no-repeat;
+    background-size: rem(300) auto;
+    background-position: rem(230) rem(490);
+    @include media-query(large-mobile) {
+        background-image: none;
+    }
+}
+
+.intro__container {
+    max-width: 100%;
+    min-height: rem(0);
+    padding: $section-padding;
+    padding-top: rem(45);
+    background-image: url(../images/bg-tablet-pattern.svg);
+    background-repeat: no-repeat;
+    background-size: rem(400) auto;
+    background-position: rem(50) rem(-50);
+
+    @include media-query(large-mobile) {
+        background-size: rem(600) auto;
+        background-position: rem(300) rem(-50);
+    }
+    @include media-query(tablet-mini) {
+        background-size: rem(700) auto;
+        background-position: rem(500) rem(-150);
+    }
+    @include media-query(desktop) {
+        padding-top: rem(60);
+        background-size: rem(800) auto;
+        background-position: rem(700) rem(-150);
+    }
+}
+
+.header {
+    max-width: 100%;
+    min-height: rem(0);
+    z-index: 1000;
+    position: relative;
+
+    &__inner {
+        max-width: $width-max;
+        min-height: rem(44);
+        margin: $center-section;
+        display: flex;
+        align-items: center;
+
+        @include media-query(tablet) {
+            min-height: rem(64);
+        }
+        & > * {
+            @include media-query(tablet) {
+                flex: 1;
+            }
+        }
+    }
+
+    &__logo{ 
+        flex: 10;
+        @include media-query(tablet) {
+            flex: 1;
+            padding-top: rem(10);
+        }
+
+        img {
+            max-width: rem(110);
+            height: auto;
+
+            @include media-query(tablet) {
+                max-width: rem(147);
+            }
+        } 
+    }
+
+    &__menu {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        @include media-query(tablet) {
+            justify-content: center;
+            flex: 4;
+        }
+    }
+
+    &__button {
+        display: none;
+
+        @include media-query(tablet) {
+            display: block;   
+            text-align: right;
+            margin-top: rem(-8);
+        }
+    }
+}
+
+// ==================  Dropdown 
+.hamburger {
+    border: none;
+    img {
+        background-color: inherit;
+    }
+    @include media-query(tablet) {
+        display: none;   
+    }
+
+    &--close {
+        img {
+            background-color: hsla(0, 0%, 0%, 0.08);
+        }
+    }
+}
+.menu {
+    background-color: $color-neutral;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin-top: rem(37);
+    min-height: rem(291);
+    border-radius: rem(4);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-shadow: rem(0) rem(10) rem(20) hsla(220, 10%, 35%, 0.226);
+    transition: all 1s linear;
+    padding-top: rem(20);
+
+    @include media-query(tablet) {
+        background-color: transparent;
+        position: initial;
+        flex-direction: row;
+        margin-top: rem(0);
+        min-height: rem(0);
+        border-radius: rem(0);
+        right: auto;
+        left: auto;
+        box-shadow: none;
+        padding-top: rem(0);
+    }
+
+    &__item {
+        margin: rem(0) rem(16.5);
+        flex: 1;
+        text-align: center;
+
+        @include media-query(tablet) {
+            display: inline-flex;
+        }
+        
+        a {
+            color: $color-font;
+            font-weight: $weight-bold;
+
+            &:hover {
+                transition: 0.5s;
+                color: #242d5277;
+            }
+        }
+    }
+}
+
+.menu--active {
+    display: none;
+
+    @include media-query(tablet) {
+        display: block;   
+    }
+}
+
+.overlay {
+    position: fixed;
+    max-width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-image: linear-gradient(180deg, #00000000, #000000);
+    transition: 1s;
+
+    @include media-query(tablet) {
+        display: none;
+    }
+}

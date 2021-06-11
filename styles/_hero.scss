@@ -1,0 +1,57 @@
+// ========== Hero
+.hero {
+    max-width: 100%;
+    min-height: rem(0);
+
+    &__inner {
+        max-width: $width-max;
+        margin: $center-section;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        @include media-query(tablet) {
+            // background-color: red;
+            flex-direction: row-reverse;
+            min-height: rem(640);
+        }
+    }
+
+    &__image{
+        min-height: rem(315);
+        display: flex;
+        align-items: center;
+        @include media-query(tablet) {
+            flex: 1;
+        }
+    }
+
+    &__content {
+        min-height: rem(409);
+        text-align: center;
+
+        @include media-query(tablet) {
+            flex: 1;
+            min-height: rem(0);
+            text-align: left;
+            align-content: center;
+        }
+
+        p {
+            padding: rem(10) rem(0) rem(29) rem(0);
+
+            @include media-query(tablet) {
+                margin: rem(12) rem(0);
+                padding-right: rem(200);
+            }
+        }
+    }
+}
+
+.hero__background {
+    background-color: red;
+    width: 100%;
+}
+
+//* ==============================================================================

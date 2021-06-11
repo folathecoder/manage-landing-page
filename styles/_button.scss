@@ -1,0 +1,15 @@
+// ======= Button 
+.btn {
+    padding: rem(12) rem(32) rem(16) rem(32);
+    border-radius: rem(50);
+    background-color: $color-accent;
+    color: $color-neutral;
+    font-size: rem(13);
+    line-height: rem(13);
+    font-weight: $weight-bold;
+    box-shadow: rem(0) rem(4) rem(0) rem(0) rgba(0, 0, 0, 0.075);
+    &:hover {
+        transition: all 0.5s ease-in-out;
+        background-color: $color-accent-active;
+    }
+}

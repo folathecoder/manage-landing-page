@@ -13,11 +13,15 @@ const heroSection = document.querySelector('.hero');
 const ctaSection = document.querySelector('.cta');
 const jumpIcon = document.querySelector('.jump--top-icon i');
 
+//* ==============================================================================
+
+//TODO: Create dropdown menu functionality 
+
 //* Add class to hide gamburger close icon and overlay
 hamburgerClose.classList.add('hidden');
 overlay.classList.add('hidden');
 
-//* Functions that opens and closes the dropdown menu on mobile
+//* Create functions that opens the dropdown menu on mobile
 const openDropdown = function() {
     hamburgerOpen.classList.add('hidden');
     hamburgerClose.classList.remove('hidden');
@@ -26,6 +30,7 @@ const openDropdown = function() {
     body.style.overflow = 'hidden';
 } 
 
+//* Create functions that closes the dropdown menu on mobile
 const closeDropdown = function() {
     hamburgerOpen.classList.remove('hidden');
     hamburgerClose.classList.add('hidden');
@@ -34,6 +39,7 @@ const closeDropdown = function() {
     body.style.overflow = 'auto';
 } 
 
+//* Event Listeners that opens or closes the dropdown
 //* Dropdown Open
 hamburgerOpen.addEventListener('click', e => {
     openDropdown();   
@@ -47,12 +53,16 @@ overlay.addEventListener('click', e => {
     closeDropdown();
 })
 
+//* ==============================================================================
+
 //TODO: Smooth Scroll To The Top
 
 jumpUpBtn.addEventListener('click', e => {
     console.log(e.target);
     header.scrollIntoView({behavior:"smooth"});
 })
+
+//* ==============================================================================
 
 //TODO: Hide Jump-to-top Button 
 
@@ -76,6 +86,8 @@ const heroObserver = new IntersectionObserver(heroCallback, heroOptions);
 
 heroObserver.observe(heroSection);
 
+//* ==============================================================================
+
 //TODO: Cookies Pop-Up Message
 
 //* Create Outter and Inner divs
@@ -94,9 +106,13 @@ cookiesContainer.innerHTML = '<p>This site uses cookies to provide you with the 
 //* Attach the cookie container before the header section
 header.before(cookies);
 
+//* ==============================================================================
+
 //TODO: Automatically remove the cookie message after 20 seconds of activity or idleness
 
 setTimeout(() => cookies.remove(), 20000);
+
+//* ==============================================================================
 
 //TODO: Change Background Color Jump To Button When It Hovers CTA Section + Remove Cookie when user scrolls to CTA Section
 
@@ -112,7 +128,6 @@ const ctaCallback = function(entries) {
         jumpUpBtn.style.backgroundColor = '#f25f3a';
         jumpIcon.style.color = '#ffffff';
     }
-
 }
 
 const ctaOptions = {
@@ -124,6 +139,7 @@ const ctaObserver = new IntersectionObserver(ctaCallback, ctaOptions);
 
 ctaObserver.observe(ctaSection);
 
+//* ==============================================================================
 
 //TODO: Email Validation 
 
@@ -171,6 +187,7 @@ footButton.addEventListener('click', e => {
     errorMessage.classList.add('error--active');
 })
 
+//* ==============================================================================
 
 //TODO: Slider Component
 
@@ -203,3 +220,5 @@ testButton.addEventListener('click', e => {
         console.log(i);
     })
 })
+
+//* ==============================================================================

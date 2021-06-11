@@ -1,0 +1,214 @@
+// ========= Footer
+.footer {
+    background-color: $color-footer-bg;
+    max-width: 100%;
+    min-height: rem(0);
+    padding: rem(24);
+
+    &__inner {
+        max-width: $width-max;
+        min-height: rem(0);
+        margin: $center-section;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        "foot1 foot1"
+        "foot2 foot3"
+        "foot4 foot4";
+        grid-template-rows: auto;
+
+        @include media-query(large-mobile) {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas: 
+            "foot1 foot1 foot1"
+            "foot2 foot3 foot4"
+        }
+
+        & > * {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+}
+
+.foot--1 {
+    grid-area: foot4;
+    flex-direction: column-reverse;
+    min-height: rem(100);
+    padding-top: rem(24);  
+}
+.foot--2 {
+    grid-area: foot2;
+}
+.foot--3 {
+    grid-area: foot3;
+}
+.foot--4 {
+    grid-area: foot1;
+    padding: rem(25) rem(0);
+}
+.foot--logo {
+    align-self: center;
+    padding: rem(40) rem(0) rem(25) rem(0);
+    @include media-query(large-mobile) {
+        align-self: flex-end;
+    }
+}
+.foot--icons {
+    display: flex;
+    justify-content: space-between;
+    img {
+        height: rem(32);
+        width: auto;
+
+        &:hover {
+            color: $color-accent;
+            transition: 0.5s ease-in-out both;
+            transform: translateY(rem(-5));
+        }
+    }
+}
+.foot--form {
+    display: flex;
+
+    &__input {
+        flex: 10;
+    }
+
+    &__button {
+        flex: 1;
+    }
+}
+.foot--input{
+    display: block;
+    background-color: $color-neutral;
+    height: rem(44);
+    width: 100%;
+    border-radius: rem(40);
+    font-size: rem(13);
+    padding: rem(0) rem(10);
+    border-color: $color-accent;
+}
+.foot--btn {
+    width: rem(64);
+    height: rem(44);
+    padding: rem(0);
+    margin-left: rem(8);
+    border-color: transparent;
+    cursor: pointer;
+}
+
+.email--error {
+    display: none;
+    transition: 0.5s;
+    transform: translateX(rem(50));
+    font-size: rem(10);
+    font-style: italic;
+    color: hsl(0, 88%, 59%);
+    padding-left: rem(15);
+}
+.error--active {
+    display: block;
+    animation: error 0.5s both;
+
+    @keyframes error {
+        0% {transform: translateX(rem(50));}
+        20% {transform: translateX(rem(0));}
+        40% {transform: translateX(rem(5));}
+        60% {transform: translateX(rem(0));}
+        80% {transform: translateX(rem(3));}
+        100% {transform: translateX(rem(0));}
+    }
+}
+
+.foot--copyright {
+    text-align: center;
+    font-size: rem(13);
+    color: rgba(255, 255, 255, 0.397);
+
+    @include media-query(large-mobile) {
+        text-align: right;
+    }
+}
+.copyright__tablet {
+    display: none;
+}
+.foot--menu {
+    padding-left: rem(25);
+
+    @include media-query(large-mobile) {
+        padding-left: rem(0);
+    }
+    a {
+        color: $color-neutral;
+        font-size: rem(15);
+        font-weight: $weight-regular;
+        line-height: rem(35);
+
+        &:hover {
+            transition: 0.5s;
+            color: $color-accent;
+        }
+    }
+}
+
+@include media-query(tablet) {
+    .footer {
+        min-height: rem(250);
+        background-color: $color-footer-bg;
+        display: flex;
+        align-items: center;
+
+        &__inner {
+            width: $width-max;
+            margin: $center-section;
+            display: flex;
+
+            & > * {
+                flex: 1;
+            }
+        }
+ }
+  .foot {
+      padding: rem(20);
+  }
+
+  .foot--1, .foot--4 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  }
+  .foot--1 {
+      flex: 1;
+  }
+  .foot--2 {
+      .foot--menu {
+          padding-left: rem(40);   
+      }
+  }
+  .foot--logo {
+      padding: rem(0);
+      align-self: flex-start;
+  }
+  .foot--copyright {
+      text-align: right;
+  }
+  .foot--4 {
+      flex: 2;
+  }
+  .copyright__mobile {
+    display: none;
+  }
+  .copyright__tablet {
+    display: block;
+  }
+  .foot--icons {
+    img {
+        height: rem(20);
+        width: auto;
+    }
+}
+}
+
+//* ==============================================================================
