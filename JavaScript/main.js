@@ -194,31 +194,71 @@ footButton.addEventListener('click', e => {
 const slides = document.querySelectorAll('.slide');
 const testButton = document.querySelector('.testimonial__btn');
 
-let currentSlide = -1;
-const maxSlide = slides.length;
+// let currentSlide = -1;
+// const maxSlide = slides.length;
 
-slides.forEach((s,i) => {
-    s.style.transition = `1s linear`;
-    s.style.transform = `translateX(${100 * (currentSlide + i)}%)`;
-})
+// slides.forEach((s,i) => {
+//     s.style.transition = `1s linear`;
+//     s.style.transform = `translateX(${100 * (currentSlide + i)}%)`;
+// })
 
 
-testButton.addEventListener('click', e => {
-    e.preventDefault();
+const swiper = new Swiper('.swiper-container', {
+    // Optional parameters
+    // direction: 'vertical',
+    loop: true,
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  });
 
-    if (currentSlide === (maxSlide + 1)) {
-        currentSlide = -1;
-      }
-    else {
-    currentSlide--;
-    }
-    // if (maxSlide ==){
 
-    // }
-    slides.forEach((s,i) => {
-        s.style.transform = `translateX(${100 * (currentSlide + i)}%)`;
-        console.log(i);
-    })
-})
+// testButton.addEventListener('click', e => {
+//     e.preventDefault();
+
+//     if (currentSlide === (maxSlide + 1)) {
+//         currentSlide = -1;
+//       }
+//     else {
+//     currentSlide--;
+//     }
+//     slides.forEach((s, i) => {
+//         s.style.transform = `translateX(${100 * (currentSlide + i)}%)`;
+//         console.log(i);
+//     })
+// })
+
+// document.addEventListener('keydown', e => {
+//     console.log(e.key);
+
+//     if (e.key === ArrowRight) {
+
+//         if (currentSlide === (maxSlide + 1)) {
+//             currentSlide = -1;
+//           }
+//         else {
+//         currentSlide--;
+//         }
+//         slides.forEach((s, i) => {
+//             s.style.transform = `translateX(${100 * (currentSlide + i)}%)`;
+//             console.log(i);
+//         })
+
+//     }
+// })
 
 //* ==============================================================================
+
