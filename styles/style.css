@@ -623,7 +623,6 @@ h3 {
 
 .swiper-container {
   max-width: 100%;
-  overflow-y: scroll;
 }
 
 .swiper-wrapper {
@@ -647,6 +646,10 @@ h3 {
   background-color: #fbf4f3;
   height: 15.5rem;
   max-width: 21.25rem;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  color: #f25f3a;
 }
 
 @media screen and (min-width: 992px) {

@@ -205,7 +205,7 @@ const testButton = document.querySelector('.testimonial__btn');
 
 const swiper = new Swiper('.swiper-container', {
     // Optional parameters
-    // direction: 'vertical',
+    direction: 'horizontal',
     loop: true,
   
     // If we need pagination

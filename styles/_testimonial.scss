@@ -56,7 +56,7 @@
 
 .swiper-container {
     max-width: 100%;
-    overflow-y: scroll;
+    // overflow-y: scroll;
 }
 .swiper-wrapper {
     min-height: 0px;
@@ -76,7 +76,9 @@
     max-width: rem(340);
 }
 
-
+.swiper-button-next, .swiper-button-prev {
+    color: $color-accent;
+}
 
 // .slider {
 //     // background-color: red;
