@@ -1152,6 +1152,7 @@ h3 {
   place-items: center;
   -webkit-animation: jump 3s ease-in-out;
           animation: jump 3s ease-in-out;
+  z-index: 3000;
 }
 
 @media screen and (min-width: 992px) {

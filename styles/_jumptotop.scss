@@ -12,6 +12,7 @@
     display: grid;
     place-items: center;
     animation: jump 3s ease-in-out;
+    z-index: 3000;
 
     @include media-query(tablet) {
       margin: rem(15);
