@@ -12,7 +12,7 @@ const jumpUpBtn = document.querySelector('.jump--top');
 const heroSection = document.querySelector('.hero');
 const ctaSection = document.querySelector('.cta');
 const jumpIcon = document.querySelector('.jump--top-icon i');
-
+const footer = document.querySelector('footer');
 //* ==============================================================================
 
 //TODO: Create dropdown menu functionality 
@@ -85,32 +85,6 @@ const heroOptions = {
 const heroObserver = new IntersectionObserver(heroCallback, heroOptions);
 
 heroObserver.observe(heroSection);
-
-//* ==============================================================================
-
-//TODO: Cookies Pop-Up Message
-
-//* Create Outter and Inner divs
-const cookies = document.createElement('div');
-const cookiesContainer = document.createElement('div');
-
-//* Append the inner container to the outter container
-cookies.append(cookiesContainer);
-
-//* Add classes
-cookies.classList.add('cookies');
-cookiesContainer.classList.add('cookies__inner');
-
-cookiesContainer.innerHTML = '<p>This site uses cookies to provide you with the best user experience. By using Manage, you accept our <a href="">use of cookies.</a></p>'
-
-//* Attach the cookie container before the header section
-header.before(cookies);
-
-//* ==============================================================================
-
-//TODO: Automatically remove the cookie message after 20 seconds of activity or idleness
-
-setTimeout(() => cookies.remove(), 20000);
 
 //* ==============================================================================
 

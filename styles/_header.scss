@@ -13,7 +13,7 @@
     max-width: 100%;
     min-height: rem(0);
     padding: $section-padding;
-    padding-top: rem(45);
+    padding-top: rem(20);
     background-image: url(../images/bg-tablet-pattern.svg);
     background-repeat: no-repeat;
     background-size: rem(400) auto;
@@ -28,7 +28,6 @@
         background-position: rem(500) rem(-150);
     }
     @include media-query(desktop) {
-        padding-top: rem(60);
         background-size: rem(800) auto;
         background-position: rem(700) rem(-150);
     }
